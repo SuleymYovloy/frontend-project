@@ -1,23 +1,51 @@
 {
   "compilerOptions": {
+    // outDir - where to put the compiled files
     "outDir": "./dist/",
+    // Highlights all places where the type is not specified
+    // However, this does not mean that now you can not use any at all.
+    // This only means that in such situations, the developer must explicitly write "any",
     "noImplicitAny": true,
-    "module": "ESNext",
+    // module - how to compile modules. There are two options: commonjs and es6.
+    "module": "es2020", // variants: commonjs, es6, es2015, ESNext, etc. commonjs - for node.js, for backend
+    // In which specification we compile: to support most browsers
     "target": "es5",
+    // jsx - allows you to use jsx syntax
     "jsx": "react-jsx",
+    // The compiler will process not only TS files, but also JS files
     "allowJs": true,
+    // moduleResolution - how to resolve modules (files). There are two options: classic and node.
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true, 
-    "baseUrl": ".", 
+    // baseUrl - the base path for all imports
+    "baseUrl": "./",
+    // paths - aliases for imports
     "paths": {
       "*": ["./src/*"]
-    }
+    },
+    // esModuleInterop allows you to work with packages that use
+    // common js as with regular packages using import (require() module.export) = common js
+    // import Moment from 'moment';
+    // without the esModuleInterop flag, the result is undefined
+    // console.log(Moment);
+    // with the flag, the result is [object Object]
+    // console.log(Moment);
+    "esModuleInterop": true,
+    // If any library does not have a default import,
+    // loaders like ts-loader or babel-loader automatically create them
+    // instead of such an import
+    // import * as React from 'react';
+    // you can write this
+    // import React from 'react';
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": ["./config/jest/setupTests.tsx", "./src/**/*"],
+    "include": [
+      "./config/jest/setupTests.ts",
+      "src/**/*.{ts,tsx}",
+      "src"
+    ],
 }
