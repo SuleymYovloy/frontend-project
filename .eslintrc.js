@@ -36,6 +36,7 @@ module.exports = {
 			"error",
 			"tab"
 		],
+		//fix lint
 		"linebreak-style": 0,
 		"quotes": [
 			"error",
