@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: windows-2023
+    runs-on: windows-2019
     strategy:
       matrix:
         node-version: [ 18.x ]
