@@ -1,17 +1,20 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@testing-library/jest-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {
-  test('should be rendered', () => {
+  test('with only first param', () => {
     renderWithTranslation(<Sidebar />);
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
-
-  test('test toggle button', () => {
+  test('test toggle', () => {
     renderWithTranslation(<Sidebar />);
-    const toggleButton = screen.getByTestId('sidebar-toggle');
-    fireEvent.click(toggleButton);
+    const toggleBtn = screen.getByTestId('sidebar-toggle');
+    expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+    fireEvent.click(toggleBtn);
     expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
   });
 });
