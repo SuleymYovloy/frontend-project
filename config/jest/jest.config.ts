@@ -23,11 +23,14 @@ export default {
   moduleDirectories: ['node_modules'],
   modulePaths: ['<rootDir>src'],
   testMatch: [
-    // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
+    'src/**/__tests__/**/*.[jt]s?(x)',
+    'src/**/?(*.)+(spec|test).[tj]s?(x)',
+    '<rootDir>src/**/*(*.)@(spec|test).[jt]s?(x)',
   ],
   rootDir: '../../',
-  setuptFilesAfterEnv: ['<rootDir>config/jest/setupTests.tsx'],
+  setupFilesAfterEnv: [
+    '<rootDir>config/jest/setupTests.ts',
+  ],
 
   moduleNameMapper: {
     '\\.(s?css)$': 'identity-obj-proxy',
