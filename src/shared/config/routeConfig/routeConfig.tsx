@@ -6,6 +6,7 @@ import { RouteProps } from 'react-router-dom';
 export enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
+  // eslint-disable-next-line no-tabs
 	NOT_FOUND = 'not_found',
 }
 
