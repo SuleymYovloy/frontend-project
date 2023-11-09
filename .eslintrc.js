@@ -36,7 +36,10 @@ module.exports = {
 			"error",
 			"tab"
 		],
-		"linebreak-style": 0,
+		"linebreak-style": [
+			0
+		],
+		"eslint linebreak-style": [0, "ошибка", "windows"],
 		"quotes": [
 			"error",
 			"double"
