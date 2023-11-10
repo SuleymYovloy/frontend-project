@@ -33,9 +33,9 @@
   "author": "Gapur",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GapurEvloev/frontend-project/issues"
+    "url": "https://github.com/SuleymYvloy/frontend-project/issues"
   },
-  "homepage": "https://github.com/GapurEvloev/frontend-project#readme",
+  "homepage": "https://github.com/SuleymYvloy/frontend-project#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
@@ -110,8 +110,7 @@
     "react-redux": "^8.1.2",
     "react-router-dom": "^6.2.1"
   },
-  "loki": {
-    "configurations": {
+  "SuleymYvloyonfigurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,
