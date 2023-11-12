@@ -9,13 +9,13 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
-  const { t } = useTranslation();
-  return (
-  // eslint-disable-next-line react/jsx-filename-extension
-    <div className={classNames(cls.Navbar, {}, [className])}>
-      <div className={cls.links}>
-        /
-      </div>
-    </div>
-  );
+    const { t } = useTranslation();
+    return (
+    // eslint-disable-next-line react/jsx-filename-extension
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                /
+            </div>
+        </div>
+    );
 };
