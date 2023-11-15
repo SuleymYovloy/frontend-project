@@ -30,7 +30,7 @@ select {
   --overlay-color: rgba(0 0 0 / 60%);
 }
 
-.app.dark {
+.app_dark_theme {
   --bg-color: #090949;
   --inverted-bg-color: #e8e8ea;
   --primary-color: #15ba15;
