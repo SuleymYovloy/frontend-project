@@ -40,11 +40,13 @@ module.exports = {
         'no-shadow': 'off',
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            onlyAttribute: ['t', 'i18nKey'],
-            ignoreAttribute: ['data-testid', 'to'],
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
         'max-len': ['error', {
             code: 140,
             ignoreComments: true,

@@ -92,5 +92,10 @@ SquareSizeXl.args = {
     square: true,
     size: ButtonSize.XL,
 };
-// @ts-ignore
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: '>',
+    theme: ButtonTheme.OUTLINE,
+    disabled: true,
+};

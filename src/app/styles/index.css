@@ -28,6 +28,8 @@ select {
   --sidebar-width-collapsed: 80px;
   --modal-z-index: 10px;
   --overlay-color: rgba(0 0 0 / 60%);
+  --red-light: #ff0505;
+  --red-dark: #ce0505;
 }
 
 .app_dark_theme {
