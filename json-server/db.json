@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Сулейм",
+    "lastname": "Евлоев",
+    "age": 22,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Magas",
+    "username": "admin",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqfDqijVQXQ-uijkbKcIssrp0LMvgrq8-MA&usqp=CAU"
+  }
 }
