@@ -57,10 +57,5 @@
 .collapsed .lang {
   margin-left: 0;
 }
-.collapsed .link {
-  opacity: 0;
-  transition: 0.2s opacity;
-  width: 0;
-}
 
 /*# sourceMappingURL=Sidebar.module.css.map */
