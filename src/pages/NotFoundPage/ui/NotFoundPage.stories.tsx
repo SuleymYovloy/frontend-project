@@ -13,7 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof NotFoundPage>;
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+const Template: ComponentStory<typeof NotFoundPage> = () => (
     <NotFoundPage />
 );
 

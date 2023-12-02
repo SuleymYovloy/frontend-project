@@ -24,10 +24,10 @@ export function useTheme(): UseThemeResult {
         default:
             newTheme = Theme.LIGHT;
         }
-        setTheme(newTheme);
+        setTheme?.(newTheme);
         document.body.className = newTheme;
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
-    return { theme, toggleTheme };
+    return { theme: theme || Theme.LIGHT, toggleTheme };
 }

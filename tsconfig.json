@@ -19,6 +19,7 @@
     // baseUrl - the base path for all imports
     "baseUrl": "./",
     // paths - aliases for imports
+    "strict": true,
     "paths": {
       "*": ["./src/*"]
     },
