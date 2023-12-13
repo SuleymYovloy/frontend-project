@@ -1,6 +1,7 @@
 .ProfileCard {
   padding: 20px;
   border: 2px solid var(--inverted-bg-color);
+  width: 100%;
 }
 
 .header {
@@ -17,6 +18,13 @@
 
 .input {
   margin-top: 10px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
 }
 
 /*# sourceMappingURL=ProfileCard.module.css.map */
