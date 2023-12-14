@@ -1,0 +1,9 @@
+.ProfilePageHeader {
+  display: flex;
+  margin-bottom: 20px;
+}
+.ProfilePageHeader .editBtn {
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=ProfilePageHeader.module.css.map */
