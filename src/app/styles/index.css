@@ -44,17 +44,17 @@ select {
 .app_dark_theme {
   --bg-color: #090949;
   --inverted-bg-color: #e8e8ea;
-  --primary-color: #04ff04;
-  --secondary-color: #049604;
+  --primary-color: #15b015;
+  --secondary-color: #055d05;
   --inverted-primary-color: #0232c2;
   --inverted-secondary-color: #0452ff;
 }
 
 .app_orange_theme {
-  --bg-color: #ffffff;
-  --inverted-bg-color: #d87716;
-  --primary-color: #892604;
-  --secondary-color: #d73711;
+  --bg-color: #e1dede;
+  --inverted-bg-color: #26821f;
+  --primary-color: #01010e;
+  --secondary-color: #c34a2a;
   --inverted-primary-color: #d3d0d0;
   --inverted-secondary-color: #dfdfdf;
 }
