@@ -50,6 +50,15 @@ select {
   --inverted-secondary-color: #0452ff;
 }
 
+.app_orange_theme {
+  --bg-color: #ffffff;
+  --inverted-bg-color: #d87716;
+  --primary-color: #892604;
+  --secondary-color: #d73711;
+  --inverted-primary-color: #d3d0d0;
+  --inverted-secondary-color: #dfdfdf;
+}
+
 .app,
 .app_modal {
   font: var(--font-m);
