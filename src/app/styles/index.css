@@ -39,6 +39,8 @@ select {
   --secondary-color: #0449e0;
   --inverted-primary-color: #04ff04;
   --inverted-secondary-color: #049604;
+  --skeleton-color: #fff;
+  --skeleton-shadow: rgba(0 0 0 / 20%);
 }
 
 .app_dark_theme {
@@ -48,6 +50,8 @@ select {
   --secondary-color: #055d05;
   --inverted-primary-color: #0232c2;
   --inverted-secondary-color: #0452ff;
+  --skeleton-color: #4848c3;
+  --skeleton-shadow: #2b51e8;
 }
 
 .app_orange_theme {
@@ -57,6 +61,8 @@ select {
   --secondary-color: #c34a2a;
   --inverted-primary-color: #d3d0d0;
   --inverted-secondary-color: #dfdfdf;
+  --skeleton-color: #fff;
+  --skeleton-shadow: rgba(0 0 0 / 20%);
 }
 
 .app,
@@ -76,7 +82,9 @@ select {
 
 .page-wrapper {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 20px 20px 45px;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
