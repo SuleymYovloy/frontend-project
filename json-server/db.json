@@ -86,7 +86,7 @@
   "comments": [
     {
       "id": "1",
-      "text": "some comment 1",
+      "text": "some comment",
       "articleId": "1",
       "userId": "1"
     },
@@ -106,15 +106,17 @@
   "users": [
     {
       "id": "1",
-      "username": "admin",
+      "userName": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
     },
     {
       "id": "2",
-      "username": "user",
+      "userName": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
     }
   ],
   "profile": {
@@ -124,7 +126,7 @@
     "currency": "RUB",
     "country": "Russia",
     "city": "ыаыа",
-    "username": "admin",
+    "userName": "admin",
     "avatar": "https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg"
   }
 }
