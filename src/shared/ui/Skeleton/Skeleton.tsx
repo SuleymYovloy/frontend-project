@@ -20,11 +20,13 @@ export const Skeleton = memo((props: SkeletonProps) => {
     const styles: CSSProperties = {
         width,
         height,
-        border,
         borderRadius: border,
     };
 
     return (
-        <div className={classNames(cls.Skeleton, {}, [className])} style={styles} />
+        <div
+            className={classNames(cls.Skeleton, {}, [className])}
+            style={styles}
+        />
     );
 });

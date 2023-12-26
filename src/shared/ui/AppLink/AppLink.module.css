@@ -1,9 +1,8 @@
 .AppLink {
   color: var(--primary-color);
-
-  &:hover {
-    opacity: 0.8;
-  }
+}
+.AppLink:hover {
+  opacity: 0.8;
 }
 
 .primary {
@@ -17,3 +16,5 @@
 .red {
   color: var(--red);
 }
+
+/*# sourceMappingURL=AppLink.module.css.map */

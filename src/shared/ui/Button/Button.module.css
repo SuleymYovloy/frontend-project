@@ -1,6 +1,12 @@
 .Button {
   padding: 6px 15px;
   cursor: pointer;
+  color: var(--primary-color);
+}
+.Button:hover {
+  opacity: 0.8;
+  fill-opacity: 0.8;
+  stroke-opacity: 0.8;
 }
 
 .clear,
