@@ -14,6 +14,7 @@ import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffe
 import {
     fetchCommentsByArticleId
 } from "pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import {AddCommentForm} from "features/addCommentForm";
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -50,6 +51,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
+                <AddCommentForm/>
                 <CommentList
                     isLoading={commentsIsLoading}
                     comments={comments}

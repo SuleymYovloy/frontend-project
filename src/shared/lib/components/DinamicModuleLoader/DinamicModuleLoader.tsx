@@ -18,7 +18,7 @@ export const DinamicModuleLoader: FC<DinamicModuleLoaderProps> = (props) => {
     const {
         children,
         reducers,
-        removeAfterUnmount,
+        removeAfterUnmount = true,
     } = props;
 
     useEffect(() => {

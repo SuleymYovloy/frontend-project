@@ -119,14 +119,28 @@
       "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
     }
   ],
-  "profile": {
-    "first": "Сулейм",
-    "lastname": "Евлоев",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "ыаыа",
-    "userName": "admin",
-    "avatar": "https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Сулейм",
+      "lastname": "Евлоев",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "ыаыа",
+      "userName": "admin",
+      "avatar": "https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Раяна",
+      "lastname": "Евлоева",
+      "age": 17,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Boston",
+      "userName": "python",
+      "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
+    }
+  ]
 }
