@@ -5,16 +5,14 @@ import {memo, useCallback} from 'react';
 import {Input} from "shared/ui/Input/Input";
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
 import {useSelector} from "react-redux";
-import {
-    getAddCommentFormError,
-    getAddCommentFormText
-} from "../../model/selectors/addCommentFormSelectors";
+import {getAddCommentFormError, getAddCommentFormText} from "../../model/selectors/addCommentFormSelectors";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {addCommentFormActions, addCommentFormReducer} from "../../model/slices/addCommentFormSlice";
 import {DinamicModuleLoader, ReducersList} from "shared/lib/components/DinamicModuleLoader/DinamicModuleLoader";
 
-interface AddCommentFormProps {
+export interface AddCommentFormProps {
     className?: string;
+    onSendComment: (text: string) => void;
 }
 
 const reducers: ReducersList = {
@@ -24,6 +22,7 @@ const reducers: ReducersList = {
 const AddCommentForm = memo((props: AddCommentFormProps) => {
     const {
         className,
+        onSendComment,
     } = props;
     const {t} = useTranslation();
     const text = useSelector(getAddCommentFormText)
@@ -32,17 +31,26 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     const onCommentTextChange = useCallback((value: string) => {
         dispatch(addCommentFormActions.setText(value))
-    }, [dispatch])
+    }, [dispatch]);
+
+    const onSendHandler = useCallback(() => {
+        onSendComment(text || '');
+        onCommentTextChange('')
+    }, [onCommentTextChange, onSendComment, text])
 
     return (
         <DinamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
+                    className={cls.input}
                     placeholder={t('Введите комментарий')}
                     value={text}
                     onChange={onCommentTextChange}
                 />
-                <Button theme={ButtonTheme.OUTLINE}>
+                <Button
+                    theme={ButtonTheme.OUTLINE}
+                    onClick={onSendHandler}
+                >
                     {t('Отправить')}
                 </Button>
             </div>

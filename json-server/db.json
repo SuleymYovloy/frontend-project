@@ -14,12 +14,14 @@
   "articles": [
     {
       "id": "1",
-      "title": "JavaScript news",
-      "subtitle": "Что нового в JS в 2023",
-      "img": "https://habrastorage.org/webt/nt/sn/p0/ntsnp0tdw5g9f-dowf8toer5smc.png",
+      "title": "Javascript news",
+      "subtitle": "Что нового в JS за 2022 год?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "22.12.2023",
-      "type": ["IT"],
+      "createdAt": "26.02.2022",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -82,7 +84,6 @@
       ]
     }
   ],
-
   "comments": [
     {
       "id": "1",
@@ -101,45 +102,93 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "4Cljjzl"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123asfasf",
+      "id": "AEM4Dvc"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123asfasf",
+      "id": "IFEOWl0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет мир",
+      "id": "dBacYRZ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "хехехехе",
+      "id": "rBX_C-e"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "фыафыа",
+      "id": "5k0ApX-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsdfsd",
+      "id": "w-HDIRq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdasdasd",
+      "id": "MVvGQoZ"
     }
   ],
   "users": [
     {
       "id": "1",
-      "userName": "admin",
+      "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
     },
     {
       "id": "2",
-      "userName": "user",
+      "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "Сулейм",
-      "lastname": "Евлоев",
+      "first": "Suleym",
+      "lastname": "Evloev",
       "age": 22,
       "currency": "RUB",
       "country": "Russia",
-      "city": "ыаыа",
-      "userName": "admin",
+      "city": "Moscow",
+      "username": "admin213",
       "avatar": "https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg"
     },
     {
       "id": "2",
-      "first": "Раяна",
-      "lastname": "Евлоева",
-      "age": 17,
+      "first": "Rayana1223",
+      "lastname": "Evloeva",
+      "age": 16,
       "currency": "USD",
-      "country": "USA",
+      "country": "America",
       "city": "Boston",
-      "userName": "python",
+      "username": "rayana",
       "avatar": "https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png"
     }
   ]
