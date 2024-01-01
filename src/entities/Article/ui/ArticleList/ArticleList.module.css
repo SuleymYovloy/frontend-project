@@ -1,0 +1,14 @@
+.BIG .card {
+  margin-bottom: 30px;
+}
+
+.SMALL {
+  display: flex;
+  flex-wrap: wrap;
+}
+.SMALL .card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=ArticleList.module.css.map */

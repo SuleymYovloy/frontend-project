@@ -42,6 +42,7 @@ select {
   --skeleton-color: #fff;
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
+  --carg-bg: #cacacc;
 }
 
 .app_dark_theme {
@@ -54,6 +55,7 @@ select {
   --skeleton-color: #4848c3;
   --skeleton-shadow: #2b51e8;
   --code-bg: #1919c1;
+  --carg-bg: #0f0f7b;
 }
 
 .app_orange_theme {
@@ -66,6 +68,7 @@ select {
   --skeleton-color: #fff;
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
+  --carg-bg: #cacacc;
 }
 
 .app,

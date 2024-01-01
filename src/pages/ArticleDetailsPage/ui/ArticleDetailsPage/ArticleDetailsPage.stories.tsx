@@ -24,6 +24,11 @@ const article: Article = {
     views: 1022,
     createdAt: '22.12.2023',
     type: [ArticleType.IT],
+    user: {
+        id: "1",
+        userName: 'Suleym',
+        avatar: 'https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg'
+    },
     blocks: [
         {
             id: '1',
