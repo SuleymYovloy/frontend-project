@@ -1,12 +1,12 @@
-import {createAsyncThunk} from '@reduxjs/toolkit';
-import {ThunkConfig} from 'app/providers/StoreProvider';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ThunkConfig } from 'app/providers/StoreProvider';
 import {
     getArticlesPageHasMore,
     getArticlesPageIsLoading,
-    getArticlesPageNum
-} from "../../selectors/articlesPageSelectors";
-import {articlesPageActions} from "../../slices/articlePageSlice";
-import {fetchArticlesList} from "../fetchArticlesList/fetchArticlesList";
+    getArticlesPageNum,
+} from '../../selectors/articlesPageSelectors';
+import { articlesPageActions } from '../../slices/articlePageSlice';
+import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
 export const fetchNextArticlesPage = createAsyncThunk<
     void,
@@ -26,6 +26,5 @@ export const fetchNextArticlesPage = createAsyncThunk<
                 page: page + 1,
             }));
         }
-
     },
 );

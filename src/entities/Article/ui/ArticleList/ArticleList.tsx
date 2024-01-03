@@ -1,10 +1,10 @@
-import {classNames} from 'shared/lib/classNames/classNames';
-import {useTranslation} from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
+import React, { memo } from 'react';
+import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
-import React, {memo} from 'react';
-import {Article, ArticleView} from "../../model/types/article";
-import {ArticleListItem} from "../ArticleListItem/ArticleListItem";
-import {ArticleListItemSkeleton} from "entities/Article/ui/ArticleListItem/ArticleListItemSkeleton";
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 
 interface ArticleListProps {
     className?: string;
@@ -13,25 +13,24 @@ interface ArticleListProps {
     view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) =>
-    new Array(view === ArticleView.SMALL ? 9 : 3)
-        .fill(0)
-        .map((item, index) => (
-            <ArticleListItemSkeleton className={cls.card} view={view} key={index}/>
-        ));
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton className={cls.card} view={view} key={item} />
+    ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
         view = ArticleView.SMALL,
-        isLoading
+        isLoading,
     } = props;
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const renderArticle = (article: Article) => (
-        <ArticleListItem article={article} view={view} className={cls.card} key={article.id}/>
-    )
+        <ArticleListItem article={article} view={view} className={cls.card} key={article.id} />
+    );
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>

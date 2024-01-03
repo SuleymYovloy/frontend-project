@@ -1,7 +1,7 @@
-import {createAsyncThunk} from '@reduxjs/toolkit';
-import {ThunkConfig} from 'app/providers/StoreProvider';
-import {Article} from "entities/Article";
-import {getArticlesPageLimit} from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ThunkConfig } from 'app/providers/StoreProvider';
+import { Article } from 'entities/Article';
+import { getArticlesPageLimit } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors';
 
 interface FetchArticlesListProps {
     page?: number;
@@ -25,7 +25,7 @@ export const fetchArticlesList = createAsyncThunk<
                 params: {
                     _expand: 'user',
                     _limit: limit,
-                    _page: page
+                    _page: page,
                 },
             });
 

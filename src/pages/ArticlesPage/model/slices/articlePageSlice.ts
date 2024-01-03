@@ -1,9 +1,9 @@
-import {createEntityAdapter, createSlice, PayloadAction,} from '@reduxjs/toolkit';
-import {StateSchema} from 'app/providers/StoreProvider';
-import {Article, ArticleView} from "entities/Article";
-import {ArticlesPageSchema} from "pages/ArticlesPage/model/types/articlesPageSchema";
-import {fetchArticlesList} from "../../model/services/fetchArticlesList/fetchArticlesList";
-import {ARTICLE_VIEW_LOCALSTORAGE_KEY} from "shared/const/localStorage";
+import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { StateSchema } from 'app/providers/StoreProvider';
+import { Article, ArticleView } from 'entities/Article';
+import { ArticlesPageSchema } from 'pages/ArticlesPage/model/types/articlesPageSchema';
+import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
@@ -22,12 +22,13 @@ const articlesPageSlice = createSlice({
         entities: {},
         view: ArticleView.SMALL,
         page: 1,
-        hasMore: true
+        hasMore: true,
+        _inited: false,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
-           state.view = action.payload;
-           localStorage.setItem(ARTICLE_VIEW_LOCALSTORAGE_KEY, action.payload)
+            state.view = action.payload;
+            localStorage.setItem(ARTICLE_VIEW_LOCALSTORAGE_KEY, action.payload);
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -36,7 +37,8 @@ const articlesPageSlice = createSlice({
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 4 : 9;
-        }
+            state._inited = true;
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -61,5 +63,5 @@ const articlesPageSlice = createSlice({
 
 export const {
     reducer: articlesPageReducer,
-    actions: articlesPageActions
+    actions: articlesPageActions,
 } = articlesPageSlice;

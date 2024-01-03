@@ -1,4 +1,4 @@
-import { User } from "entities/User/model/types/user";
+import { User } from 'entities/User/model/types/user';
 
 export enum ArticleBlockType {
     CODE = 'CODE',

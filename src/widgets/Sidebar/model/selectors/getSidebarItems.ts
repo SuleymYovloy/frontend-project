@@ -1,12 +1,12 @@
-import {createSelector} from "@reduxjs/toolkit";
-import {getUserAuthData} from "entities/User";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
-import MainIcon from "shared/assets/icons/main.svg";
-import AboutIcon from "shared/assets/icons/about.svg";
-import ProfileIcon from "shared/assets/icons/profile.svg";
-import ArticleIcon from "shared/assets/icons/article.svg";
+import { createSelector } from '@reduxjs/toolkit';
+import { getUserAuthData } from 'entities/User';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import MainIcon from 'shared/assets/icons/main.svg';
+import AboutIcon from 'shared/assets/icons/about.svg';
+import ProfileIcon from 'shared/assets/icons/profile.svg';
+import ArticleIcon from 'shared/assets/icons/article.svg';
 
-import {SidebarItemType} from "widgets/Sidebar/model/types/sidebar";
+import { SidebarItemType } from 'widgets/Sidebar/model/types/sidebar';
 
 export const getSidebarItems = createSelector(
     getUserAuthData,
@@ -38,9 +38,9 @@ export const getSidebarItems = createSelector(
                     text: 'Статьи',
                     authOnly: true,
                 },
-            )
+            );
         }
 
         return sidebarItemsList;
     },
-)
+);

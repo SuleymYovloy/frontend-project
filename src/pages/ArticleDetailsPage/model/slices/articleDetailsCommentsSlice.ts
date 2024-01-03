@@ -1,11 +1,11 @@
-import {createEntityAdapter, createSlice, PayloadAction,} from '@reduxjs/toolkit';
+import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import {Comment} from 'entities/Comment';
-import {StateSchema} from 'app/providers/StoreProvider';
-import {ArticleDetailsCommentsSchema} from '../types/ArticleDetailsCommentsSchema';
+import { Comment } from 'entities/Comment';
+import { StateSchema } from 'app/providers/StoreProvider';
 import {
-    fetchCommentsByArticleId
-} from "pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+    fetchCommentsByArticleId,
+} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 
 const commentsAdapter = createEntityAdapter<Comment>({
     selectId: (comment) => comment.id,
@@ -35,7 +35,7 @@ const articleDetailsCommentsSlice = createSlice({
                 action: PayloadAction<Comment[]>,
             ) => {
                 state.isLoading = false;
-                commentsAdapter.setAll(state, action.payload)
+                commentsAdapter.setAll(state, action.payload);
             })
             .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
                 state.isLoading = false;

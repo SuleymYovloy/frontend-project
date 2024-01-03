@@ -3,10 +3,10 @@ import { memo } from 'react';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
-import {AppLink} from "shared/ui/AppLink/AppLink";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
 
 interface CommentCardProps {
     className?: string;
@@ -34,7 +34,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
     }
 
     if (!comment) {
-        return null
+        return null;
     }
 
     return (
