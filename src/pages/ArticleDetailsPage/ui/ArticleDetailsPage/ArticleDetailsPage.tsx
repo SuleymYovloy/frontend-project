@@ -11,14 +11,12 @@ import {getArticleCommentsIsLoading} from '../../model/selectors/comments';
 import {articleDetailsCommentsReducer, getArticleComments} from '../../model/slices/articleDetailsCommentsSlice';
 import cls from './ArticleDetailsPage.module.scss';
 import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import {
-    fetchCommentsByArticleId
-} from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import {fetchCommentsByArticleId} from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import {AddCommentForm} from "features/addCommentForm";
 import {addCommentForArticle} from "../../model/services/addCommentForArticle/addCommentForArticle";
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
-import {navigate} from "@storybook/addon-links";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import {Page} from "shared/ui/Page/Page";
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -53,15 +51,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DinamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                     {t('Назад к списку')}
                 </Button>
@@ -72,7 +70,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DinamicModuleLoader>
 
     );
