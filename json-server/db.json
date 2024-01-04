@@ -39,10 +39,10 @@
     {
       "id": "2",
       "title": "C++ news",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "subtitle": "Что нового в JS за 2023 год?",
       "img": "https://www.freeiconspng.com/thumbs/c-logo-icon/c--logo-icon-0.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1122,
+      "createdAt": "26.02.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -63,10 +63,10 @@
     {
       "id": "3",
       "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "subtitle": "Что нового в JS за 2021 год?",
       "img": "https://www.svgrepo.com/show/376344/python.svg",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "26.02.2021",
       "userId": "1",
       "type": [
         "IT"
@@ -86,9 +86,9 @@
     },
     {
       "id": "4",
-      "title": "C++ news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.freeiconspng.com/thumbs/c-logo-icon/c--logo-icon-0.png",
+      "title": "Kotlin news",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://logowik.com/content/uploads/images/kotlin.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -110,10 +110,10 @@
     },
     {
       "id": "5",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.svgrepo.com/show/376344/python.svg",
-      "views": 1022,
+      "title": "Ruby news",
+      "subtitle": "Что нового в Ruby за 2022 год?",
+      "img": "https://cdn.iconscout.com/icon/free/png-256/free-ruby-44-1175099.png",
+      "views": 1322,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -134,11 +134,11 @@
     },
     {
       "id": "6",
-      "title": "C++ news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.freeiconspng.com/thumbs/c-logo-icon/c--logo-icon-0.png",
+      "title": "TypeScript news",
+      "subtitle": "Что нового в TS за 2019 год?",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "26.02.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -158,9 +158,9 @@
     },
     {
       "id": "7",
-      "title": "Python news",
+      "title": "Java news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.svgrepo.com/show/376344/python.svg",
+      "img": "https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -182,9 +182,9 @@
     },
     {
       "id": "8",
-      "title": "C++ news",
+      "title": "C# news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.freeiconspng.com/thumbs/c-logo-icon/c--logo-icon-0.png",
+      "img": "https://www.iconpacks.net/icons/4/free-c-sharp-icon-14369-thumb.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
