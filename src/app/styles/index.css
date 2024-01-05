@@ -12,6 +12,10 @@ select {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --font-family-main: consolas, "Times New Roman";
   --font-size-m: 16px;
@@ -84,6 +88,24 @@ select {
 
 .content-page {
   display: flex;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--carg-bg);
+  border: 2px solid var(--inverted-bg-color);
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=index.css.map */
