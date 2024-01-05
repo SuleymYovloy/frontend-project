@@ -27,6 +27,7 @@ const article = {
         avatar: 'https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg',
     },
     type: [
+        'ALL',
         'IT',
         'SCIENCE',
         'POLITICS',

@@ -4,4 +4,12 @@
   background: var(--carg-bg);
 }
 
+.normal {
+  background: var(--carg-bg);
+}
+
+.outlined {
+  border: 1px solid var(--primary-color);
+}
+
 /*# sourceMappingURL=Card.module.css.map */
