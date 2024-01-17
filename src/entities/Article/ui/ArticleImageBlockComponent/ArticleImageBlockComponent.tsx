@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 import cls from './ArticleImageBlockComponent.module.scss';
-import { ArticleImageBlock } from '../../model/types/article';
+import { ArticleImageBlock } from '../../model/types/Article';
 
 interface ArticleImageBlockComponentProps {
     className?: string;

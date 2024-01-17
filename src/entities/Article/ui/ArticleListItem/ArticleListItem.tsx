@@ -13,7 +13,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
-} from '../../model/types/article';
+} from '../../model/types/Article';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {

@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { ArticleTextBlock } from '../../model/types/article';
+import { ArticleTextBlock } from '../../model/types/Article';
 import cls from './ArticleTextBlockComponent.module.scss';
 
 interface ArticleTextBlockComponentProps {
