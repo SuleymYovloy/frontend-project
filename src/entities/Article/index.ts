@@ -1,4 +1,4 @@
-import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import { ArticleTypeTabs } from '../Article/ui/ArticleTypeTabs/ArticleTypeTabs';
 
 export {
     ArticleDetails,

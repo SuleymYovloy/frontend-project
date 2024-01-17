@@ -12,7 +12,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
-import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { ArticleDetailsPageHeader } from '../../ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';
 import {
     fetchArticleRecommendations,
@@ -73,10 +73,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     title={t('Рекомендуем')}
                 />
                 <ArticleList
-                    target="_blank"
                     articles={recommendations}
                     isLoading={recommendationsIsLoading}
                     className={cls.recommendations}
+                    target="_blank"
                 />
                 <Text
                     size={TextSize.L}

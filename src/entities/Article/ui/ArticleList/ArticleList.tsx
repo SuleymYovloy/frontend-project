@@ -1,10 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { HTMLAttributeAnchorTarget, memo } from 'react';
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, ListRowProps, WindowScroller } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/Page';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -44,7 +44,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         const fromIndex = index * itemsPerRow;
         const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
 
-        for (let i = fromIndex; i < toIndex; i++) {
+        for (let i = fromIndex; i < toIndex; i += 1) {
             items.push(
                 <ArticleListItem
                     target={target}
