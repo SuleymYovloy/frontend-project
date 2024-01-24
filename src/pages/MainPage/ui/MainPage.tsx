@@ -16,23 +16,6 @@ const MainPage = () => {
     return (
         <Page>
             {t('Главная страница')}
-            <div>sdfsfsfsf</div>
-            <HStack>
-                <div>ssdfsf</div>
-                <ListBox
-                    defaultValue="Выберите значение"
-                    onChange={(value: string) => {}}
-                    value={undefined}
-                    items={[
-                        { value: '1', content: '124' },
-                        { value: '2', content: 'fgh', disabled: true },
-                        { value: '3', content: 'asdx' },
-                    ]}
-                />
-            </HStack>
-            <div>ssdfsf</div>
-            <div>ssdfsf</div>
-            <div>ssdfsf</div>
         </Page>
     );
 };
