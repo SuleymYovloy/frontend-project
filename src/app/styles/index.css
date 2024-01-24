@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
 input,
 button,
 textarea,
@@ -50,6 +54,7 @@ a {
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
   --carg-bg: #cacacc;
+  --listbox-bg: #cacacc;
 }
 
 .app_dark_theme {
@@ -63,9 +68,10 @@ a {
   --skeleton-shadow: #2b51e8;
   --code-bg: #1919c1;
   --carg-bg: #0f0f7b;
+  --listbox-bg: #0f0f7b;
 }
 
-.app_orange_theme {
+.app_green_theme {
   --bg-color: #e1dede;
   --inverted-bg-color: #26821f;
   --primary-color: #01010e;
@@ -76,6 +82,7 @@ a {
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
   --carg-bg: #cacacc;
+  --listbox-bg: #cacacc;
 }
 
 .app,
