@@ -10,8 +10,8 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { ArticleView } from 'entities/Article';
-import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
+
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
     Article, ArticleTextBlock,
