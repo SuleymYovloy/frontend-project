@@ -11,10 +11,11 @@ import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { HStack, VStack } from 'shared/ui/Stack';
+import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/Article';
+import { ArticleBlock } from '../../model/types/Article';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
