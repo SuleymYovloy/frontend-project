@@ -8,7 +8,7 @@
 }
 
 .links,
-.dropdown {
+.actions {
   margin-left: auto;
 }
 
@@ -21,3 +21,7 @@
   margin-left: 15px;
 }
 
+
+.notification {
+  fill: var(--inverted-primary-color);
+}

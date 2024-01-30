@@ -72,7 +72,7 @@ module.exports = {
         files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {
             'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
-            'i18next/no-literal-string': 'off',
+            'i18next/no-literal-string': ['error', { ignore: ['border'] }],
             'max-len': 'off',
         },
     }],

@@ -8,7 +8,7 @@
 }
 
 .links,
-.dropdown {
+.actions {
   margin-left: auto;
 }
 
@@ -19,6 +19,10 @@
 .appName {
   width: var(--sidebar-width);
   margin-left: 15px;
+}
+
+.notification {
+  fill: var(--inverted-primary-color);
 }
 
 /*# sourceMappingURL=Navbar.module.css.map */
