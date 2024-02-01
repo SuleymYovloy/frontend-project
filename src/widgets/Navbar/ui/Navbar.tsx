@@ -49,7 +49,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     <NotificationButton />
                     <AvatarDropdown />
                 </HStack>
-
             </header>
         );
     }

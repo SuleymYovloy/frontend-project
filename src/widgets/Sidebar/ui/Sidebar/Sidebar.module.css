@@ -16,32 +16,18 @@
 
 .lang {
   margin-left: 20px;
-  color: var(--primary-color);
 }
 
 .collapseBtn {
   position: absolute;
   right: -32px;
   bottom: 32px;
-  z-index: 100000;
+  z-index: 10;
 }
 
 .items {
   margin-top: 20px;
   margin-left: 30px;
-}
-
-.item {
-  margin-top: 10px;
-}
-
-.link {
-  margin-left: 10px;
-  opacity: 1;
-}
-
-.icon {
-  fill: var(--inverted-secondary-color);
 }
 
 .collapsed {
