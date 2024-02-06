@@ -1,5 +1,7 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import {DetailedHTMLProps, HTMLAttributes, memo, ReactNode } from 'react';
+import {
+    DetailedHTMLProps, HTMLAttributes, memo, ReactNode,
+} from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
@@ -64,8 +66,8 @@ export const Flex = (props: FlexProps) => {
     ];
 
     const mods: Mods = {
-        [cls.max]: max
-    }
+        [cls.max]: max,
+    };
 
     return (
         <div className={classNames(cls.Flex, mods, classes)}>

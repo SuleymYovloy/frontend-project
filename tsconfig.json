@@ -1,41 +1,36 @@
 {
   "compilerOptions": {
-    // outDir - where to put the compiled files
     "outDir": "./dist/",
-    // Highlights all places where the type is not specified
-    // However, this does not mean that now you can not use any at all.
-    // This only means that in such situations, the developer must explicitly write "any",
+    // Подсвечивает все места где не указан тип
+    // Однако это не означает, что теперь вовсе нельзя использовать any.
+    // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
     "noImplicitAny": true,
-    // module - how to compile modules. There are two options: commonjs and es6.
-    "module": "es2020", // variants: commonjs, es6, es2015, ESNext, etc. commonjs - for node.js, for backend
-    // In which specification we compile: to support most browsers
+    "module": "ESNext",
+    // В какую спецификацию компилируем: для поддержки большинства браузеров
     "target": "es5",
-    // jsx - allows you to use jsx syntax
     "jsx": "react-jsx",
-    // The compiler will process not only TS files, but also JS files
+    // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
-    // moduleResolution - how to resolve modules (files). There are two options: classic and node.
-    "moduleResolution": "node",
-    // baseUrl - the base path for all imports
-    "baseUrl": "./",
-    // paths - aliases for imports
     "strict": true,
+    "moduleResolution": "node",
+    // Для абсолютного импорта
+    "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "@/*": ["./src/*"]
     },
-    // esModuleInterop allows you to work with packages that use
-    // common js as with regular packages using import (require() module.export) = common js
+    // esModuleInterop позволяет работать с пакетами, которые используют
+    // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
-    // without the esModuleInterop flag, the result is undefined
+    // без флага esModuleInterop результат undefined
     // console.log(Moment);
-    // with the flag, the result is [object Object]
+    // c флагом результат [object Object]
     // console.log(Moment);
     "esModuleInterop": true,
-    // If any library does not have a default import,
-    // loaders like ts-loader or babel-loader automatically create them
-    // instead of such an import
+    // Если какая-либо библиотека не имеет default import,
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их
+    // вместо такого импорта
     // import * as React from 'react';
-    // you can write this
+    // можно писать такой
     // import React from 'react';
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true
@@ -47,7 +42,7 @@
   },
   "include": [
     "./config/jest/setupTests.ts",
-    "src/**/*.{ts,tsx}",
-    "src"
-  ],
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }

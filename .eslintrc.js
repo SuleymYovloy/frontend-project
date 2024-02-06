@@ -40,16 +40,6 @@ module.exports = {
         'no-shadow': 'off',
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': [
-            'error',
-            {
-                markupOnly: true,
-                ignoreAttribute: ['as', 'role', 'data-testid', 'to', 'target', 'justify',
-                    'align',
-                    'direction',
-                    'gap'],
-            },
-        ],
         'max-len': ['error', {
             code: 140,
             ignoreComments: true,
@@ -68,12 +58,19 @@ module.exports = {
         __API__: true,
         __PROJECT__: true,
     },
-    overrides: [{
-        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-        rules: {
-            'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
-            'i18next/no-literal-string': ['error', { ignore: ['border'] }],
-            'max-len': 'off',
+    overrides: [
+        {
+            files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
         },
-    }],
+        {
+            files: ['**/*.stories.tsx', '**/*.test.ts'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off',
+            },
+        },
+    ],
 };
