@@ -2,9 +2,9 @@ import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
-import { mapDirectionClass } from '../../styles/consts';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
+import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popups.module.scss';
 
 export interface DropdownItem {
@@ -15,16 +15,15 @@ export interface DropdownItem {
 }
 
 interface DropdownProps {
-    className?: string
+    className?: string;
     items: DropdownItem[];
-    trigger: ReactNode;
     direction?: DropdownDirection;
-
+    trigger: ReactNode;
 }
 
 export function Dropdown(props: DropdownProps) {
     const {
-        className, items, trigger, direction = 'bottom right',
+        className, trigger, items, direction = 'bottom right',
     } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
@@ -38,6 +37,7 @@ export function Dropdown(props: DropdownProps) {
                 {items.map((item, index) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
+                            type="button"
                             disabled={item.disabled}
                             onClick={item.onClick}
                             className={classNames(cls.item, { [popupCls.active]: active })}
@@ -60,7 +60,11 @@ export function Dropdown(props: DropdownProps) {
                     }
 
                     return (
-                        <Menu.Item as={Fragment} disabled={item.disabled} key={`dropdown-key-${index}`}>
+                        <Menu.Item
+                            key={`dropdown-key-${index}`}
+                            as={Fragment}
+                            disabled={item.disabled}
+                        >
                             {content}
                         </Menu.Item>
                     );
