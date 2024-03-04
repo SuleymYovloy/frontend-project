@@ -12,4 +12,8 @@
   border: 1px solid var(--primary-color);
 }
 
+.max {
+  width: 100%;
+}
+
 /*# sourceMappingURL=Card.module.css.map */
