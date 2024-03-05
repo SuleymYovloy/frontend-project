@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { DinamicModuleLoader, ReducersList } from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page/ui/Page/Page';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleInfiniteList } from '../../ui/ArticleInfiniteList/ArticleInfiniteList';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
