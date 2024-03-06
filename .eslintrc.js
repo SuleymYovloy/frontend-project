@@ -52,6 +52,13 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'sul-plugin/path-checker': ['error', { alias: '@' }],
+        'sul-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/StoreProvider'],
+            },
+        ],
         'sul-plugin/public-api-imports': [
             'error',
             {
