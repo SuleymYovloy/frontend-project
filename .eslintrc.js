@@ -56,7 +56,7 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/StoreProvider'],
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
         'sul-plugin/public-api-imports': [
