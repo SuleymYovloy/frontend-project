@@ -52,7 +52,13 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'sul-plugin/path-checker': ['error', { alias: '@' }],
-        'sul-plugin/public-api-imports': ['error', { alias: '@' }],
+        'sul-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
