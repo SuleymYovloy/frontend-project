@@ -2,12 +2,10 @@ import { useTranslation } from 'react-i18next';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import MainIcon from '@/shared/assets/icons/main.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
-import { RoutePath } from '@/shared/const/router';
 
 interface SidebarItemProps {
     item: SidebarItemType,

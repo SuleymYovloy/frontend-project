@@ -13,14 +13,15 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'sul-plugin'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'sul-plugin', 'unused-imports'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx', 'json'] },
+            { extensions: ['.js', '.jsx', '.tsx', 'json']},
         ],
         // 'react/jsx-indent': [2, 2],
         // 'react/jsx-indent-props': [2, 2],
@@ -51,7 +52,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'sul-plugin/path-checker': ['error', { alias: '@' }],
+        'sul-plugin/path-checker': ['error', {alias: '@'}],
         'sul-plugin/layer-imports': [
             'error',
             {

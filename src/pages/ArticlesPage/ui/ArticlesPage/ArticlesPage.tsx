@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { useSearchParams } from 'react-router-dom';
 import { DinamicModuleLoader, ReducersList } from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
 import { Page } from '@/widgets/Page';
 import { classNames } from '@/shared/lib/classNames/classNames';
