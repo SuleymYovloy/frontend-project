@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleList } from '@/entities/Article';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
