@@ -40,6 +40,7 @@ export default {
     moduleNameMapper: {
         '\\.(s?css)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent'),
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     transformIgnorePatterns: ['node_modules/(?!axios)'],
     reporters: [

@@ -4,7 +4,7 @@ import { componentRender } from '@/shared/lib/tests/componentRender/componentRen
 import { Counter } from './Counter';
 
 describe('Counter', () => {
-    test('with only first param', () => {
+    test('test render', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
