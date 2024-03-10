@@ -8,6 +8,7 @@
   "PROFILE PAGE": "",
   "Suleym App": "Suleym App",
   "Ulbi TV App": "Ulbi TV App",
+  "add5": "add5",
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
@@ -90,6 +91,5 @@
   "дате создания": "дате создания",
   "количеству просмотров": "количеству просмотров",
   "названию": "названию",
-  "убыванию": "убыванию",
-  "add5": "add5"
+  "убыванию": "убыванию"
 }
