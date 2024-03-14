@@ -23,10 +23,10 @@ describe('Роутинг', () => {
             cy.visit('/profile/1');
             cy.get(selectByTestId('ProfilePage')).should('exist');
         });
-        it('Переход открывает страницу со списком статей', () => {
-            //     cy.visit('/articles');
-            //     cy.get(selectByTestId('ArticlesPage')).should('exist');
-            // });
-        //
+
+        // it('Переход открывает страницу со списком статей', () => {
+        //     cy.visit('/articles');
+        //     cy.get(selectByTestId('ArticlesPage')).should('exist');
+        // });
     });
 });

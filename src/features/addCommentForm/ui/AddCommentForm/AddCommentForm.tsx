@@ -7,8 +7,11 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DinamicModuleLoader, ReducersList } from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
-import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
+import {
+    getAddCommentFormError,
+    getAddCommentFormText,
+} from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -21,10 +24,7 @@ const reducers: ReducersList = {
 };
 
 const AddCommentForm = memo((props: AddCommentFormProps) => {
-    const {
-        className,
-        onSendComment,
-    } = props;
+    const { className, onSendComment } = props;
     const { t } = useTranslation();
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
@@ -41,14 +41,21 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DinamicModuleLoader reducers={reducers}>
-            <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack
+                data-testid="AddCommentForm"
+                justify="between"
+                max
+                className={classNames(cls.AddCommentForm, {}, [className])}
+            >
                 <Input
                     className={cls.input}
-                    placeholder={t('Введите комментарий')}
+                    placeholder={t('Введите текст комментария')}
                     value={text}
+                    data-testid="AddCommentForm.Input"
                     onChange={onCommentTextChange}
                 />
                 <Button
+                    data-testid="AddCommentForm.Button"
                     theme={ButtonTheme.OUTLINE}
                     onClick={onSendHandler}
                 >
