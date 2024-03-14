@@ -1,16 +1,16 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleType, ArticleBlockType } from '../../model/consts/articleConsts';
-import { Article } from '../../model/types/Article';
-import { ArticleDetails } from './ArticleDetails';
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import {ArticleType, ArticleBlockType} from '../../model/consts/articleConsts';
+import {Article} from '../../model/types/Article';
+import {ArticleDetails} from './ArticleDetails';
 
 export default {
     title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
-        backgroundColor: { control: 'color' },
+        backgroundColor: {control: 'color'},
     },
 } as ComponentMeta<typeof ArticleDetails>;
 
@@ -26,7 +26,7 @@ const article: Article = {
     type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'Ulbi tv',
+        username: 'suleym',
     },
     blocks: [
         {
