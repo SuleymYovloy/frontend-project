@@ -5,7 +5,13 @@ export default defineConfig({
         setupNodeEvents(on, config) {
             // implement node event listeners here
         },
-        defaultCommandTimeout: 20000,
         baseUrl: 'http://localhost:3000/',
+    },
+
+    component: {
+        devServer: {
+            framework: 'react',
+            bundler: 'webpack',
+        },
     },
 });
