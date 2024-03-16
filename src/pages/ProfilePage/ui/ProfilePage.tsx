@@ -19,7 +19,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
             <VStack gap="16" max>
                 <EditableProfileCard id={id} />
             </VStack>
-
         </Page>
     );
 };

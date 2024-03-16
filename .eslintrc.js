@@ -4,7 +4,13 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -13,15 +19,19 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'sul-plugin', 'unused-imports'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'sul-plugin',
+        'unused-imports',
+    ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx', 'json']},
+            { extensions: ['.js', '.jsx', '.tsx', 'json'] },
         ],
         // 'react/jsx-indent': [2, 2],
         // 'react/jsx-indent-props': [2, 2],
@@ -41,10 +51,13 @@ module.exports = {
         'no-shadow': 'off',
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', {
-            code: 140,
-            ignoreComments: true,
-        }],
+        'max-len': [
+            'error',
+            {
+                code: 140,
+                ignoreComments: true,
+            },
+        ],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react/button-has-type': 'off', // TODO: check this rule
@@ -52,7 +65,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'sul-plugin/path-checker': ['error', {alias: '@'}],
+        'sul-plugin/path-checker': ['error', { alias: '@' }],
         'sul-plugin/layer-imports': [
             'error',
             {
@@ -64,9 +77,14 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,

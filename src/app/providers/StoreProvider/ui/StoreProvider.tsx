@@ -6,16 +6,12 @@ import { StateSchema } from '../config/StateSchema';
 
 interface StoreProviderProps {
     children?: ReactNode;
-    initialState?: DeepPartial<StateSchema>
-    asyncReducers?: DeepPartial<ReducersMapObject>
+    initialState?: DeepPartial<StateSchema>;
+    asyncReducers?: DeepPartial<ReducersMapObject>;
 }
 
 export const StoreProvider = (props: StoreProviderProps) => {
-    const {
-        children,
-        initialState,
-        asyncReducers,
-    } = props;
+    const { children, initialState, asyncReducers } = props;
 
     // const navigate = useNavigate();
 
@@ -25,9 +21,5 @@ export const StoreProvider = (props: StoreProviderProps) => {
         // navigate,
     );
 
-    return (
-        <Provider store={store}>
-            {children}
-        </Provider>
-    );
+    return <Provider store={store}>{children}</Provider>;
 };

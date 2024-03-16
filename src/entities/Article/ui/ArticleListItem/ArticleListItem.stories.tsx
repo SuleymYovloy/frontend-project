@@ -13,7 +13,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+    <ArticleListItem {...args} />
+);
 
 const article = {
     id: '1',
@@ -27,13 +29,7 @@ const article = {
         username: 'Suleym',
         avatar: 'https://abrakadabra.fun/uploads/posts/2022-03/1646811598_3-abrakadabra-fun-p-ava-programmista-7.jpg',
     },
-    type: [
-        'ALL',
-        'IT',
-        'SCIENCE',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['ALL', 'IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',
