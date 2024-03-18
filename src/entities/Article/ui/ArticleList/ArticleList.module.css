@@ -4,6 +4,7 @@
 
 .SMALL {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .SMALL .card {
