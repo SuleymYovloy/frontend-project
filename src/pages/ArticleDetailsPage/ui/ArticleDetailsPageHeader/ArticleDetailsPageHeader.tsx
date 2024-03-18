@@ -27,14 +27,14 @@ export const ArticleDetailsPageHeader = memo(
 
         const onEditArticle = useCallback(() => {
             if (article) {
-                navigate(getRouteArticleEdit(article?.id));
+                navigate(getRouteArticleEdit(article.id));
             }
         }, [article, navigate]);
 
         return (
             <HStack
-                justify="between"
                 max
+                justify="between"
                 className={classNames('', {}, [className])}
             >
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>

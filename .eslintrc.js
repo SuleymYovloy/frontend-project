@@ -31,41 +31,62 @@ module.exports = {
         'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx', 'json'] },
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
         ],
-        // 'react/jsx-indent': [2, 2],
-        // 'react/jsx-indent-props': [2, 2],
-        // indent: [2, 2],
-        // 'react/jsx-filename-extension': [2, {
-        //   extensions: ['.js', '.jsx', '.tsx'],
-        // }],
-        'linebreak-style': 0,
-        'import/prefer-default-export': 'off',
-        'import/extensions': 'off',
         'import/no-unresolved': 'off',
-        'no-unused-vars': 'warn',
+        'import/prefer-default-export': 'off',
+        'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
-        'import/no-extraneous-dependencies': 'warn',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'as',
+                    'role',
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'border',
+                    'direction',
+                    'gap',
+                ],
+            },
+        ],
         'max-len': [
             'error',
             {
-                code: 140,
                 ignoreComments: true,
+                code: 125,
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
-        'react/button-has-type': 'off', // TODO: check this rule
         'react-hooks/rules-of-hooks': 'error',
+        // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error',
+        // Checks effect dependencies,
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'sul-plugin/path-checker': ['error', { alias: '@' }],
+        'react/no-array-index-key': 'off',
+        'arrow-body-style': 'off',
+        'sul-plugin/path-checker': [
+            'error',
+            {
+                alias: '@',
+            },
+        ],
         'sul-plugin/layer-imports': [
             'error',
             {
@@ -85,6 +106,7 @@ module.exports = {
             },
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,
@@ -93,13 +115,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-            rules: {
-                'i18next/no-literal-string': 'off',
-            },
-        },
-        {
-            files: ['**/*.stories.tsx', '**/*.test.ts'],
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
                 'max-len': 'off',
