@@ -1,16 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
-import { Input } from '@/shared/ui/Input';
-import { Loader } from '@/shared/ui/Loader';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Loader } from '@/shared/ui/deprecated/Loader';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
-
 import { Country, CountrySelect } from '@/entities/Country';
-
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Profile } from '../../model/types/profile';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import cls from './ProfileCard.module.scss';
+import { Profile } from '../../model/types/profile';
 
 interface ProfileCardProps {
     className?: string;
@@ -20,10 +18,10 @@ interface ProfileCardProps {
     readonly?: boolean;
     onChangeLastname?: (value?: string) => void;
     onChangeFirstname?: (value?: string) => void;
-    onChangeAge?: (value?: string) => void;
     onChangeCity?: (value?: string) => void;
-    onChangeAvatar?: (value?: string) => void;
+    onChangeAge?: (value?: string) => void;
     onChangeUsername?: (value?: string) => void;
+    onChangeAvatar?: (value?: string) => void;
     onChangeCurrency?: (currency: Currency) => void;
     onChangeCountry?: (country: Country) => void;
 }
@@ -33,16 +31,16 @@ export const ProfileCard = (props: ProfileCardProps) => {
         className,
         data,
         isLoading,
-        readonly,
         error,
+        readonly,
         onChangeFirstname,
         onChangeLastname,
         onChangeAge,
         onChangeCity,
         onChangeAvatar,
         onChangeUsername,
-        onChangeCurrency,
         onChangeCountry,
+        onChangeCurrency,
     } = props;
     const { t } = useTranslation('profile');
 
@@ -73,8 +71,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 ])}
             >
                 <Text
-                    title={t('Произошла ошибка при загрузке профиля')}
                     theme={TextTheme.ERROR}
+                    title={t('Произошла ошибка при загрузке профиля')}
                     text={t('Попробуйте обновить страницу')}
                     align={TextAlign.CENTER}
                 />
@@ -113,20 +111,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 readonly={readonly}
                 data-testid="ProfileCard.lastname"
             />
-
             <Input
                 value={data?.age}
                 placeholder={t('Ваш возраст')}
                 className={cls.input}
                 onChange={onChangeAge}
                 readonly={readonly}
-                onKeyPress={(e) => {
-                    if (!/[0-9]/.test(e.key)) {
-                        e.preventDefault();
-                    }
-                }}
             />
-
             <Input
                 value={data?.city}
                 placeholder={t('Город')}
@@ -134,15 +125,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={onChangeCity}
                 readonly={readonly}
             />
-
             <Input
                 value={data?.username}
-                placeholder={t('Имя пользователя')}
+                placeholder={t('Введите имя пользователя')}
                 className={cls.input}
                 onChange={onChangeUsername}
                 readonly={readonly}
             />
-
             <Input
                 value={data?.avatar}
                 placeholder={t('Введите ссылку на аватар')}

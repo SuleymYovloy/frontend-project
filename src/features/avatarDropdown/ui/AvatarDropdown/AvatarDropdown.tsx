@@ -1,9 +1,9 @@
-import React, { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import React, { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 import {
     getUserAuthData,
     isUserAdmin,
@@ -18,12 +18,11 @@ interface AvatarDropdownProps {
 
 export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
     const { className } = props;
-
     const { t } = useTranslation();
-    const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
     const isAdmin = useSelector(isUserAdmin);
     const isManager = useSelector(isUserManager);
+    const authData = useSelector(getUserAuthData);
 
     const onLogout = useCallback(() => {
         dispatch(userActions.logout());
@@ -37,8 +36,8 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
     return (
         <Dropdown
-            className={classNames('', {}, [className])}
             direction="bottom left"
+            className={classNames('', {}, [className])}
             items={[
                 ...(isAdminPanelAvailable
                     ? [

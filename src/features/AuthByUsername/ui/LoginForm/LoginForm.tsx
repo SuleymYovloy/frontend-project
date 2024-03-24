@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
+import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import {
     DinamicModuleLoader,
     ReducersList,
@@ -67,7 +67,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     />
                 )}
                 <Input
-                    autoFocus
+                    autofocus
                     type="text"
                     className={cls.input}
                     placeholder={t('Введите username')}
@@ -77,13 +77,13 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 <Input
                     type="text"
                     className={cls.input}
-                    placeholder={t('Введите password')}
+                    placeholder={t('Введите пароль')}
                     onChange={onChangePassword}
                     value={password}
                 />
                 <Button
-                    className={cls.loginBtn}
                     theme={ButtonTheme.OUTLINE}
+                    className={cls.loginBtn}
                     onClick={onLoginClick}
                     disabled={isLoading}
                 >
