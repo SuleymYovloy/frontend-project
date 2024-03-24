@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,8 @@ a {
 
 :root {
   --font-family-main: consolas, "Times New Roman", serif;
+  --font-family-text-redesigned: "Nunito Sans", sans-serif;
+  --font-family-header-redesigned: "Roboto", sans-serif;
   --font-size-s: 12px;
   --font-line-s: 20px;
   --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -42,6 +45,10 @@ a {
   --overlay-color: rgba(0 0 0 / 60%);
   --red-light: #f00;
   --red-dark: #ce0505;
+  --font-s-redesigned: var(--font-size-s) / var(--font-line-s) var(--font-family-text-redesigned);
+  --font-m-redesigned: var(--font-size-m) / var(--font-line-m) var(--font-family-text-redesigned);
+  --font-l-redesigned: var(--font-size-l) / var(--font-line-l) var(--font-family-header-redesigned);
+  --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header-redesigned);
 }
 
 :root {
@@ -50,40 +57,67 @@ a {
   --primary-color: #0232c2;
   --secondary-color: #0449e0;
   --inverted-primary-color: #04ff04;
-  --inverted-secondary-color: #12d312;
+  --inverted-secondary-color: #049604;
+  --dark-bg-redesigned: #FFFFFF;
+  --bg-redesigned: #EFF5F6;
+  --light-bg-redesigned: #E2EEF1;
+  --text-redesigned: #141C1F;
+  --hint-redesigned: #ADBCC0;
+  --cancel-redesigned: #FF7777;
+  --save-redesigned: #62DE85;
+  --icon-redesigned: #5ED3F3;
+  --accent-redesigned: #00C8FF;
   --skeleton-color: #fff;
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
-  --carg-bg: #cacacc;
-  --listbox-bg: #cacacc;
+  --card-bg: #d5d5d7;
+  --listbox-bg: #d5d5d7;
 }
 
 .app_dark_theme {
   --bg-color: #090949;
   --inverted-bg-color: #e8e8ea;
-  --primary-color: #15b015;
-  --secondary-color: #0d800d;
+  --primary-color: #04ff04;
+  --secondary-color: #049604;
   --inverted-primary-color: #0232c2;
   --inverted-secondary-color: #0452ff;
-  --skeleton-color: #4848c3;
-  --skeleton-shadow: #2b51e8;
-  --code-bg: #1919c1;
-  --carg-bg: #0f0f7b;
-  --listbox-bg: #0f0f7b;
+  --dark-bg-redesigned: #090F11;
+  --bg-redesigned: #0C1214;
+  --light-bg-redesigned: #151C1F;
+  --text-redesigned: #DBDBDB;
+  --hint-redesigned: #555555;
+  --cancel-redesigned: #D95757;
+  --save-redesigned: #6CD98B;
+  --icon-redesigned: #74A2B2;
+  --accent-redesigned: #5ED3F3;
+  --skeleton-color: #1515ad;
+  --skeleton-shadow: #2b2be8;
+  --code-bg: #1212a1;
+  --card-bg: #0d0d6b;
+  --listbox-bg: #0d0d6b;
 }
 
 .app_green_theme {
-  --bg-color: #e1dede;
-  --inverted-bg-color: #26821f;
-  --primary-color: #01010e;
-  --secondary-color: #c34a2a;
-  --inverted-primary-color: #d3d0d0;
-  --inverted-secondary-color: #dfdfdf;
+  --bg-color: #faf4fb;
+  --inverted-bg-color: #bd5012;
+  --primary-color: #9a1a0e;
+  --secondary-color: #d01f0e;
+  --inverted-primary-color: #dbd5dc;
+  --inverted-secondary-color: #faf4fb;
+  --dark-bg-redesigned: #FFF3D6;
+  --bg-redesigned: #F0C048;
+  --light-bg-redesigned: #F2D791;
+  --text-redesigned: #1B1311;
+  --hint-redesigned: #B8B2A2;
+  --cancel-redesigned: #FF5E5E;
+  --save-redesigned: #52FA81;
+  --icon-redesigned: #4875F0;
+  --accent-redesigned: #1D59FF;
   --skeleton-color: #fff;
   --skeleton-shadow: rgba(0 0 0 / 20%);
   --code-bg: #fff;
-  --carg-bg: #cacacc;
-  --listbox-bg: #cacacc;
+  --card-bg: #d5d5d7;
+  --listbox-bg: #d5d5d7;
 }
 
 .app,
@@ -98,26 +132,35 @@ a {
   min-height: 100vh;
 }
 
+.app_redesigned {
+  background: var(--bg-redesigned);
+  min-height: 100vh;
+  font: var(--font-m-redesigned);
+  color: var(--text-redesigned);
+}
+
 .content-page {
   display: flex;
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 5px;
-  margin-top: 10px;
+  width: 12px;
+  /* ширина scrollbar */
+  height: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--carg-bg);
-  border: 2px solid var(--inverted-bg-color);
-  margin-top: 10px;
-  border-radius: 5px;
+  background: var(--card-bg);
+  /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--inverted-primary-color);
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+  border: 2px solid var(--primary-color);
+  /* padding вокруг плашки */
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,22 +1,32 @@
-// ts-ignore
 .app_green_theme {
-  --bg-color: #e1dede;
-  --inverted-bg-color: #26821f;
-  --primary-color: #01010e;
-  --secondary-color: #c34a2a;
-  --inverted-primary-color: #d3d0d0;
-  --inverted-secondary-color: #dfdfdf;
+  --bg-color: #faf4fb;
+  --inverted-bg-color: #bd5012;
+  --primary-color: #9a1a0e;
+  --secondary-color: #d01f0e;
+  --inverted-primary-color: #dbd5dc;
+  --inverted-secondary-color: #faf4fb;
+
+  // redesigned
+  --dark-bg-redesigned: #FFF3D6;
+  --bg-redesigned: #F0C048;
+  --light-bg-redesigned: #F2D791;
+  --text-redesigned: #1B1311;
+  --hint-redesigned: #B8B2A2;
+  --cancel-redesigned: #FF5E5E;
+  --save-redesigned: #52FA81;
+  --icon-redesigned: #4875F0;
+  --accent-redesigned: #1D59FF;
 
   // skeleton
   --skeleton-color: #fff;
   --skeleton-shadow: rgba(0 0 0 / 20%);
 
-  // Code
+  // code
   --code-bg: #fff;
 
-  // card-bg
-  --carg-bg: #cacacc;
+  // card
+  --card-bg: #d5d5d7;
 
-  // list-box
-  --listbox-bg: #cacacc;
+  // listbox
+  --listbox-bg: #d5d5d7;
 }
