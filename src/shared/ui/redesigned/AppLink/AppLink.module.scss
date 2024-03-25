@@ -1,0 +1,17 @@
+.primary {
+  color: var(--text-redesigned);
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: var(--accent-redesigned);
+  }
+}
+
+.red {
+  color: var(--cancel-redesigned);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
