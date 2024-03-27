@@ -16,10 +16,9 @@ interface TabsProps {
 }
 
 /**
- * @deprecated
  * Устарел, используем новые компоненты из папки redesigned
- * */
-
+ * @deprecated
+ */
 export const Tabs = memo((props: TabsProps) => {
     const { className, tabs, onTabClick, value } = props;
 

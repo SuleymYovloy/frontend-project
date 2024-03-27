@@ -22,7 +22,7 @@ Normal.args = {
             content: 'tab 1',
         },
         {
-            value: 'tab 3',
+            value: 'tab 2',
             content: 'tab 2',
         },
         {
